@@ -5,6 +5,9 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	
-	<bean name="user" class="com.nr.entities.User"/>
+	<bean name="user" class="com.nr.entities.User">
+	<property name="firstName" value="Narendra"/>
+	<property name="lastName" value="Rabari"/>	
+	</bean>
 	
 </beans>
