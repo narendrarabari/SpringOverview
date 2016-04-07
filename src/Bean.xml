@@ -6,8 +6,8 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	
 	<bean name="user" class="com.nr.entities.User">
-	<property name="firstName" value="Narendra"/>
-	<property name="lastName" value="Rabari"/>	
+	<constructor-arg index="0" value="Narendra"/>
+		<constructor-arg index="1" value="Rabari"/>
 	</bean>
 	
 </beans>
