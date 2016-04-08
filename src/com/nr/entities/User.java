@@ -12,8 +12,14 @@ public class User {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
+	
+	public User() {
+		
+	}
+
 	String firstName;
 	String lastName;
+	private Address addressObj;
 	/**
 	 * 
 	 * @return FistName of the User
@@ -38,6 +44,21 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	
+	/**
+	 * @return the addressObj
+	 */
+	public Address getAddressObj() {
+		return addressObj;
+	}
+
+	/**
+	 * @param addressObj the addressObj to set
+	 */
+	public void setAddressObj(Address addressObj) {
+		this.addressObj = addressObj;
+	}
+
 	/**
 	 * It used to print static text on the screen 
 	 * 
@@ -47,7 +68,7 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [firstName=" + firstName + ", lastName=" + lastName + "]";
+		return "User [firstName=" + firstName + ", lastName=" + lastName + ",Address address1="+addressObj.getAddress1()+"  address2="+addressObj.getAddress2()+"]";
 	}
 	
 	
