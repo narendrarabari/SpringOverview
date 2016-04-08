@@ -19,6 +19,7 @@ public class App {
 		context = new ClassPathXmlApplicationContext("Bean.xml");
 		User user = (User) context.getBean("user1");
 		user.demoDisplay();
+		user.displayUserPosts();
 		System.out.println(user);
 	}
 

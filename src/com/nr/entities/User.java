@@ -1,5 +1,7 @@
 package com.nr.entities;
 
+import java.util.List;
+
 /**
  * 
  * @author narendra rabari
@@ -17,9 +19,11 @@ public class User {
 		
 	}
 
-	String firstName;
-	String lastName;
+	private String firstName;
+	private String lastName;
 	private Address addressObj;
+	private List<UserPost>userposts;
+	
 	/**
 	 * 
 	 * @return FistName of the User
@@ -60,11 +64,32 @@ public class User {
 	}
 
 	/**
+	 * @return the userposts
+	 */
+	public List<UserPost> getUserposts() {
+		return userposts;
+	}
+
+	/**
+	 * @param userposts the userposts to set
+	 */
+	public void setUserposts(List<UserPost> userposts) {
+		this.userposts = userposts;
+	}
+
+	/**
 	 * It used to print static text on the screen 
 	 * 
 	 */
 	public void demoDisplay(){
 		System.out.println("Hello World From User !!");
+	}
+	public void displayUserPosts(){
+		
+		for(UserPost userpost: userposts){
+			System.out.println(userpost);
+		}
+		
 	}
 	@Override
 	public String toString() {
