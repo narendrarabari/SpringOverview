@@ -5,17 +5,14 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	
-	<bean name="user" class="com.nr.entities.User">
+	<bean id="user" class="com.nr.entities.User" name="User">
 	<property name="firstName" value="Narendra"/>
 		<property name="lastName" value="Rabari"/>
-		<property name="addressObj">
-			<bean class="com.nr.entities.Address">
-				<property name="address1" value="abc"/>
-				<property name="address2" value="xyz"/>
-			</bean>
-		</property>
+		<property name="addressObj" ref="address1"/>
 	</bean>
-	
-
-	
+	<bean id="address1" class="com.nr.entities.Address">
+		<property name="address1" value="abc"/>
+		<property name="address2" value="xyz"/>
+	</bean>
+	<alias name="User" alias="User-alias"/>
 </beans>

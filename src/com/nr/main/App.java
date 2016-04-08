@@ -17,7 +17,7 @@ public class App {
 
 	public static void main(String args[]){
 		context = new ClassPathXmlApplicationContext("Bean.xml");
-		User user = (User) context.getBean("user");
+		User user = (User) context.getBean("User-alias");
 		user.demoDisplay();
 		System.out.println(user);
 	}
