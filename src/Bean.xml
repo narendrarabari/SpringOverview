@@ -25,4 +25,6 @@
 		<property name="postId" value="2" />
 		<property name="content" value="second user post" />
 	</bean>
+	
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
 </beans>

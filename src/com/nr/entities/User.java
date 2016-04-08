@@ -2,6 +2,7 @@ package com.nr.entities;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Required;
 
 /**
  * 
@@ -15,7 +16,7 @@ public class User implements InitializingBean,DisposableBean {
 	public User() {
 		
 	}
-
+	
 	private String firstName;
 	private String lastName;
 	private Address addressObj;
@@ -31,6 +32,7 @@ public class User implements InitializingBean,DisposableBean {
 	public String getFirstName() {
 		return firstName;
 	}
+	@Required
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -45,6 +47,7 @@ public class User implements InitializingBean,DisposableBean {
 	 * 
 	 * @param lastName
 	 */
+	@Required
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
