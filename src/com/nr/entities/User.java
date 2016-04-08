@@ -1,7 +1,5 @@
 package com.nr.entities;
 
-import java.util.List;
-
 /**
  * 
  * @author narendra rabari
@@ -10,10 +8,6 @@ import java.util.List;
 public class User {
 	
 	
-	public User(String firstName, String lastName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
 	
 	public User() {
 		
@@ -22,8 +16,11 @@ public class User {
 	private String firstName;
 	private String lastName;
 	private Address addressObj;
-	private List<UserPost>userposts;
+	private UserPost userPost1;
+	private UserPost userPost2;
 	
+
+
 	/**
 	 * 
 	 * @return FistName of the User
@@ -64,17 +61,29 @@ public class User {
 	}
 
 	/**
-	 * @return the userposts
+	 * @return the userPost1
 	 */
-	public List<UserPost> getUserposts() {
-		return userposts;
+	public UserPost getUserPost1() {
+		return userPost1;
+	}
+	/**
+	 * @param userPost1 the userPost1 to set
+	 */
+	public void setUserPost1(UserPost userPost1) {
+		this.userPost1 = userPost1;
+	}
+	/**
+	 * @return the userPost2
+	 */
+	public UserPost getUserPost2() {
+		return userPost2;
 	}
 
 	/**
-	 * @param userposts the userposts to set
+	 * @param userPost2 the userPost2 to set
 	 */
-	public void setUserposts(List<UserPost> userposts) {
-		this.userposts = userposts;
+	public void setUserPost2(UserPost userPost2) {
+		this.userPost2 = userPost2;
 	}
 
 	/**
@@ -85,10 +94,10 @@ public class User {
 		System.out.println("Hello World From User !!");
 	}
 	public void displayUserPosts(){
-		
-		for(UserPost userpost: userposts){
-			System.out.println(userpost);
-		}
+		System.out.println("User post id:"+userPost1.getPostId());
+		System.out.println("User post content:"+userPost1.getContent());
+		System.out.println("User post id:"+userPost2.getPostId());
+		System.out.println("User post content:"+userPost2.getContent());
 		
 	}
 	@Override
