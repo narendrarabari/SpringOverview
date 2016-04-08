@@ -8,12 +8,14 @@
 	<bean name="user" class="com.nr.entities.User">
 	<property name="firstName" value="Narendra"/>
 		<property name="lastName" value="Rabari"/>
-		<property name="addressObj" ref="address"></property>
+		<property name="addressObj">
+			<bean class="com.nr.entities.Address">
+				<property name="address1" value="abc"/>
+				<property name="address2" value="xyz"/>
+			</bean>
+		</property>
 	</bean>
 	
-	<bean name="address" class="com.nr.entities.Address">
-	<property name="address1" value="abc"/>
-	<property name="address2" value="xyz"/>
-	</bean>
+
 	
 </beans>
