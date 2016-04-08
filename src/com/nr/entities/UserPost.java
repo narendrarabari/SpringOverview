@@ -1,9 +1,13 @@
 package com.nr.entities;
+
+import org.springframework.stereotype.Component;
+
 /**
  * 
  * @author narendra rabari
  *
  */
+@Component
 public class UserPost {
 	
 	private String postId;
@@ -39,7 +43,9 @@ public class UserPost {
 	public void setPostId(String postId) {
 		this.postId = postId;
 	}
-
+	public void display(){
+		System.out.println("User Post display method is called");
+	}
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()

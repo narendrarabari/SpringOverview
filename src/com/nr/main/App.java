@@ -4,7 +4,7 @@ package com.nr.main;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.nr.entities.User;
+import com.nr.entities.UserPost;
 
 /**
  * 
@@ -18,11 +18,9 @@ public class App {
 
 	public static void main(String args[]){
 		context = new ClassPathXmlApplicationContext("Bean.xml");
-		context.registerShutdownHook();
-		User user = (User) context.getBean("user1");
-		user.demoDisplay();
-		
-		System.out.println(user);
+		//context.registerShutdownHook();
+		UserPost  userpost= (UserPost) context.getBean("userPost");
+		userpost.display();
 	}
 
 }
