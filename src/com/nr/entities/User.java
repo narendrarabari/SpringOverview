@@ -1,11 +1,14 @@
 package com.nr.entities;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
 /**
  * 
  * @author narendra rabari
  *
  */
-public class User {
+public class User implements InitializingBean,DisposableBean {
 	
 	
 	
@@ -103,6 +106,15 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [firstName=" + firstName + ", lastName=" + lastName + ",Address address1="+addressObj.getAddress1()+"  address2="+addressObj.getAddress2()+"]";
+	}
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Initialise bean method is called");
+		
+	}
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("distroy method is called");
 	}
 	
 	
