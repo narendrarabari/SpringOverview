@@ -15,4 +15,9 @@
 		<property name="address2" value="xyz"/>
 	</bean>
 	<alias name="User" alias="User-alias"/>
+	<bean id="user1" class="com.nr.entities.User" parent="user">
+	<property name="firstName" value="Abhishek"/>
+	<property name="lastName" value="Shah"/>
+	</bean>
+	
 </beans>
