@@ -1,9 +1,13 @@
 package com.nr.main;
 
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.nr.config.SpringConfig;
+import com.nr.entities.User;
 import com.nr.entities.UserPost;
 
 /**
@@ -14,13 +18,14 @@ import com.nr.entities.UserPost;
 
 public class App {
 	
-	private static AbstractApplicationContext context;
+	
 
 	public static void main(String args[]){
-		context = new ClassPathXmlApplicationContext("Bean.xml");
-		//context.registerShutdownHook();
-		UserPost  userpost= (UserPost) context.getBean("userPost");
-		userpost.display();
+		ApplicationContext ctx = 
+				   new AnnotationConfigApplicationContext(SpringConfig.class);
+		User user=(User) ctx.getBean("user1");
+		System.out.println(user);
+		
 	}
 
 }
